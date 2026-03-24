@@ -44,6 +44,11 @@
     pointer-events: none;
 }
 
+
+.waveJoinOrganizationLinerIndex {
+  z-index: 4;
+}
+
 .idolCat {
     position: absolute;
     right: 7vw;
@@ -78,12 +83,16 @@
 .adhesion-text {
     position: absolute;
     right: 235px;
-    z-index: 2;
+    z-index: 5;
     top: 185px;
     width: 39vw;
 }
 
 .wavePath {
+    pointer-events: visiblePainted; 
+    transition: fill .2s ease;
+}
+.wavePathLiner {
     pointer-events: visiblePainted; 
     transition: fill .2s ease;
 }

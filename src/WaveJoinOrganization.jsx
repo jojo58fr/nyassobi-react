@@ -6,6 +6,7 @@ import { Link } from "react-router-dom";
 function WaveJoinOrganization() {
   const containerRef = useRef(null);
   const pathRef = useRef(null);
+  const pathRefLiner = useRef(null);
   const idolRef = useRef(null);
   const textRef = useRef(null);
   const [hover, setHover] = useState(false);
@@ -68,6 +69,9 @@ function WaveJoinOrganization() {
       if (pathRef.current) {
         pathRef.current.setAttribute("d", d);
       }
+      if (pathRefLiner.current) {
+        pathRefLiner.current.setAttribute("d", d);
+      }
 
       const idolMaxMove = 80;
       const textMaxMove = 150;
@@ -125,6 +129,23 @@ function WaveJoinOrganization() {
             stroke="white"
             strokeWidth="10"
           />
+        </svg>
+        <svg
+          className={styles["waveJoinOrganization-2"] + " " +  styles["waveJoinOrganizationLinerIndex"]}
+          preserveAspectRatio="none"
+          width="100%"
+          height="100%"
+          viewBox="0 0 1920 272"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path 
+            ref={pathRefLiner} 
+            className={styles.wavePathLiner}
+            d="M1996.5 196 C1578.5 384.5 1202 136.5 697 125 C372.782 117.617 72 166.5 -38 196" 
+            fill="none"
+            stroke="white"
+            strokeWidth="10"/>
         </svg>
 
         <img
